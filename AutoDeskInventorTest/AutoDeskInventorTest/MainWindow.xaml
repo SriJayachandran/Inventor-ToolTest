@@ -1,0 +1,80 @@
+﻿<Window x:Class="AutoDeskInventorTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoDeskInventorTest"
+        mc:Ignorable="d"
+        Title="AutoDeskInventorToolTest" Height="150" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="265" />
+                <ColumnDefinition Width="40" />
+            </Grid.ColumnDefinitions>
+            <Label HorizontalAlignment="Left" 
+                    VerticalAlignment="Center" 
+                    Content="idw Template" 
+                    Height="25"  
+                    Name="srcFldrlbl" Width="80"/>
+            <TextBox Grid.Column="1"  
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center" 
+                        Name="srcfldrtxtbox" 
+                        Height="25" 
+                        Width="260" 
+                        IsReadOnly="False"/>
+            <Button Grid.Column="2"  
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center"  Content="..." 
+                    Height="25"  
+                    Name="selectsrctemplatebtn"  
+                    Width="25" Click="selectsrctemplatebtn_Click" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="265" />
+                <ColumnDefinition Width="40" />
+            </Grid.ColumnDefinitions>
+            <Label HorizontalAlignment="Left" 
+                    VerticalAlignment="Center" 
+                    Content="Input Excel" 
+                    Height="25"  
+                    Name="lblSrcExcel" Width="80"/>
+            <TextBox Grid.Column="1"  
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Center" 
+                        Name="srcExceltxtbox" 
+                        Height="25" 
+                        Width="260" 
+                        IsReadOnly="False"/>
+            <Button Grid.Column="2" 
+                    VerticalAlignment="Bottom"  Content="..." 
+                    Height="25"  
+                    Name="selectsrcExcelbtn" Click="selectsrcExcelbtn_Click" Margin="7.4,0,8,7.4" />
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="1"  
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Top"  
+                    Content="Create Drawing" 
+                    Height="25"  
+                    Name="btnCreateDrawing"  
+                    Width="100" Click="btnCreateDrawing_Click" Margin="16.4,8,15.6,0"/>
+
+        </Grid>
+    </Grid>
+</Window>
